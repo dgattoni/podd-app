@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from 'components/Card/Card.js';
+import FeaturedCard from 'components/FeaturedCard/FeaturedCard.js';
 
 class Grid extends Component {
 
@@ -9,7 +9,7 @@ class Grid extends Component {
     return(
       <div className="Grid">
         {
-          items.map((item, index) => <Card key={index} {...item} />)
+          items.map((item, index) => <FeaturedCard key={index} featured={item} />)
         }
       </div>
     );

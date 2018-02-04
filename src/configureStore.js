@@ -24,6 +24,12 @@ function configureStore() {
       isFailure: false,
       page: 1
     },
+    featuredPies: {
+      items: [],
+      isFetching: false,
+      isFailure: false,
+      page: 1
+    },
   };
 
   const store = createStore(reducer, defaultState, enhancer);

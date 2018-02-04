@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Grid from 'components/Grid/Grid.js';
-import { fetchPies } from 'actions/pies.js';
+import { fetchFeaturedPies } from 'actions/featuredPies.js';
 
 class GridContainer extends Component {
   constructor(props) {
@@ -9,20 +9,20 @@ class GridContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(fetchPies());
+    this.props.dispatch(fetchFeaturedPies());
   }
 
   render() {
-    const { pies } = this.props;
+    const { featuredPies } = this.props;
     return(
-      <Grid items={pies.items} />
+      <Grid items={featuredPies.items} />
     );
   }
 }
 
-function mapStateToProps({ pies }) {
+function mapStateToProps({ featuredPies }) {
   return {
-    pies
+    featuredPies
   }
 }
 
