@@ -17,7 +17,16 @@ function configureStore() {
   const enhancer = composeEnhancers(
     applyMiddleware(...middlewares)
   );
-  const store = createStore(reducer, enhancer);
+  const defaultState = {
+    pies: {
+      items: [],
+      isFetching: false,
+      isFailure: false,
+      page: 1
+    },
+  };
+
+  const store = createStore(reducer, defaultState, enhancer);
 
   return store;
 }

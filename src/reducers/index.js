@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import pie from 'reducers/pie.js';
+import pies from 'reducers/pies.js';
 
 const rootReducer = combineReducers({
-  pie,
+  pies,
 });
 
 export default rootReducer;

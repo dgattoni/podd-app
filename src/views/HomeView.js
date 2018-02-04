@@ -1,11 +1,11 @@
 import React from 'react';
-import Grid from 'components/Grid/Grid.js';
+import GridContainer from 'containers/GridContainer.js';
 
 const HomeView = () => (
   <div className="HomeView">
     <section className="Section">
       <h1>Home View</h1>
-      <Grid podds={[]}/>
+      <GridContainer />
     </section>
   </div>
 );

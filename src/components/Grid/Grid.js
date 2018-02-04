@@ -4,12 +4,12 @@ import Card from 'components/Card/Card.js';
 class Grid extends Component {
 
   render() {
-    const { podds } = this.props;
+    const { items } = this.props;
 
     return(
       <div className="Grid">
         {
-          podds.map((item, index) => <Card key={index} {...item} />)
+          items.map((item, index) => <Card key={index} {...item} />)
         }
       </div>
     );
