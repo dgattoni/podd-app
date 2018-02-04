@@ -42,6 +42,14 @@
   -  Added the svg version in order to support scalability without changing the image quality. Credits to `Pie by Alex Muravev from the Noun Project`: https://thenounproject.com/search/?q=pie&i=1016960#
   - Added in order to improve readability of texts on Mobile/Desktop screens. Google Fonts, Family `Inconsolata`  https://fonts.google.com/specimen/Inconsolata?selection.family=Inconsolata
 
+5. Grid system / Responsive:
+  - CSS Grid Layout is a CSS layout method that is native to CSS, designed for the two-dimensional layout of items on a webpage or application.
+  - Flexbox is the commonly-used name for the CSS Flexible Box Layout Module, a layout model for displaying items in a single dimension, as a row or as a column.
+  - I used Grid Layout because it gives us a method of creating grid structures that are described in CSS and not in HTML. It helps us to create layouts that can be redefined using Media Queries and adapt to different contexts.
+  - I also decided to use Flexbox since it is native to CSS, and easier to integrate and implement for responsive layouts.
+  - documentation Grid Layout: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+  - documentation Flexbox: https://developer.mozilla.org/en-US/docs/Glossary/Flexbox
+
 
 ### Todo:
 
