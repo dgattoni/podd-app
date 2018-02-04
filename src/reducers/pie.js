@@ -1,4 +1,4 @@
-import { LOAD_PIES } from '../actions/pie.js';
+import { LOAD_PIES } from 'actions/pie.js';
 
 export default function pie(state = [], action) {
   switch (action.type) {

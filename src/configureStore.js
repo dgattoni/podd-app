@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 //import { routerMiddleware } from 'react-router-redux';
-import reducer from './reducers/index.js';
+import reducer from 'reducers/index.js';
 
 function configureStore() {
   const middlewares = [thunk];

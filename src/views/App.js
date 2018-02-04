@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from '../components/Header/Header.js';
-import Footer from '../components/Footer/Footer.js';
-import HomeView from './HomeView.js';
-import StoreView from './StoreView.js';
+import Header from 'components/Header/Header.js';
+import Footer from 'components/Footer/Footer.js';
+import HomeView from 'views/HomeView.js';
+import StoreView from 'views/StoreView.js';
 
 class App extends Component {
   render() {

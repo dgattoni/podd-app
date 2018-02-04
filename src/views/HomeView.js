@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../components/Grid/Grid.js';
+import Grid from 'components/Grid/Grid.js';
 
 const HomeView = () => (
   <div className="HomeView">
