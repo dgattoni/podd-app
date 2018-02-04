@@ -3,10 +3,7 @@ import GridContainer from 'containers/GridContainer.js';
 
 const HomeView = () => (
   <div className="HomeView">
-    <section className="Section">
-      <h1>Home View</h1>
-      <GridContainer />
-    </section>
+    <GridContainer />
   </div>
 );
 

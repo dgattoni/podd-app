@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FeaturedCard from 'components/FeaturedCard/FeaturedCard.js';
+import './Grid.scss';
 
 class Grid extends Component {
 

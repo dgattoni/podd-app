@@ -1,4 +1,5 @@
 import React from 'react';
+import './Paginator.scss';
 
 const Paginator = ({ onPrevButtonClick, onNextButtonClick}) => (
   <div className="Paginator">

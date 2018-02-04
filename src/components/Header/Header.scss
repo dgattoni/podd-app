@@ -1,0 +1,20 @@
+@import "../../styles/config.mixins.scss";
+@import "../../styles/config.variables";
+
+.Header {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  padding-top: $gutter-v;
+
+  &-title {
+    font-size: map-get($font-size-primary, lg);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: $gutter-v/2 0;
+  }
+}

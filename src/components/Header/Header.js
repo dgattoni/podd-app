@@ -1,16 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.scss';
+import './Avatar.scss';
 
 const Header = () => (
-  <header className="Header">
-    <p>Header</p>
-    <nav className="Nav">
-      <ul className="Nav-primary">
-        <li><NavLink exact to="/">Finder</NavLink></li>
-        <li><NavLink exact to="/stores">Stores</NavLink></li>
-      </ul>
-    </nav>
-  </header>
+  <div className="Header">
+    <NavLink exact to="/"><div className="Avatar"></div></NavLink>
+    <div className="Header-title">PIE OF THE DAY</div>
+  </div>
 );
 
 export default Header;

@@ -1,0 +1,51 @@
+
+//$font-primary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-primary: 'Inconsolata', monospace;
+
+// Font Sizes
+
+$font-size-primary: (
+  3xs: 1.0rem,
+  xxs: 1.2rem,
+  xs: 1.4rem,
+  sm: 1.6rem,
+  md: 1.8rem,
+  lg: 2.1rem,
+  xl: 2.4rem,
+  xxl: 4.5rem,
+  3xl: 6.0rem,
+  4xl: 7.2rem
+);
+
+
+// Color
+
+$color-lightest: #FFF;
+$color-shadow: #E5E5E5;
+$color-border: #292A2C;
+$color-cta: #6CBFD9;
+$color-text: #EBEBEB;
+$color-text-dark: #666;
+$color-text-darker: #000;
+$color-failure: #FFA506;
+$color-card: #EBEBEB;
+$color-link: #212121;
+$color-accent-primary: #E91E63;
+$color-accent-secondary: #CDDC39;
+
+
+// Spacing
+
+$gutter-v: 2rem;
+$gutter-h: 2rem;
+
+
+// Radius
+
+$border-radius-sm: 8px;
+
+// Container Widths
+
+$container-width-1: 58rem;
+$container-width-2: 98rem;
+$container-width-3: 110rem;

@@ -25,7 +25,7 @@ function mapStores(stores) {
       city: store.city,
       state: store.state,
       postcode: store.postcode,
-      coords: store.cords,
+      coords: store.coords,
     },
     pieOfTheDay: filterByIsPieOfTheDay(store.pies),
   })

@@ -1,0 +1,10 @@
+@import "../../styles/config.mixins.scss";
+@import "../../styles/config.variables";
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: $gutter-v;
+}
