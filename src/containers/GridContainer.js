@@ -5,9 +5,9 @@ import { fetchPies } from 'actions/pies.js';
 
 class GridContainer extends Component {
   constructor(props) {
-      super(props);
+    super(props);
   }
-  
+
   componentDidMount() {
     this.props.dispatch(fetchPies());
   }
