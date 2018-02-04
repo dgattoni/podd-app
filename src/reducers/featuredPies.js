@@ -1,4 +1,10 @@
-import { REQUEST_FEATURED_PIES, RECEIVE_FEATURED_PIES_SUCCESS, RECEIVE_FEATURED_PIES_ERROR } from 'actions/featuredPies.js';
+import {
+  REQUEST_FEATURED_PIES,
+  RECEIVE_FEATURED_PIES_SUCCESS,
+  RECEIVE_FEATURED_PIES_ERROR,
+  INCREMENT_PAGE,
+  DECREMENT_PAGE
+} from 'actions/featuredPies.js';
 
 function filterByIsPieOfTheDay(pies) {
   return pies.filter(pie => pie.isPieOfTheDay);
@@ -39,6 +45,17 @@ export default function featuredPies(state = {}, action) {
     case RECEIVE_FEATURED_PIES_ERROR:
       return Object.assign({}, state, {
         isFailure: true
+      });
+    case INCREMENT_PAGE:
+      return Object.assign({}, state, {
+        page: state.page + 1
+      });
+    case DECREMENT_PAGE:
+      if (state.page === 1) {
+        return state;
+      }
+      return Object.assign({}, state, {
+        page: state.page - 1
       });
     default:
       return state;
