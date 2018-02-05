@@ -29,7 +29,7 @@ function configureStore() {
       isFetching: false,
       isFailure: false,
       page: 1,
-      defaultSort: 'asc',
+      ascendingSort: true,
     },
   };
 
