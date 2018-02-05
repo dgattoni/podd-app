@@ -5,8 +5,14 @@ export const RECEIVE_FEATURED_PIES_SUCCESS = 'RECEIVE_FEATURED_PIES_SUCCESS';
 export const RECEIVE_FEATURED_PIES_ERROR = 'RECEIVE_FEATURED_PIES_ERROR';
 export const INCREMENT_PAGE = 'INCREMENT_PAGE';
 export const DECREMENT_PAGE = 'DECREMENT_PAGE';
-
+export const TOGGLE_SORT = 'TOGGLE_SORT';
 const MAX_PER_PAGE = 5;
+
+export function toggleSort() {
+  return {
+    type: TOGGLE_SORT,
+  }
+}
 
 export function incrementPage() {
   return {
@@ -20,21 +26,21 @@ export function decrementPage() {
   }
 }
 
-function requestFeaturedPies(page) {
+export function requestFeaturedPies() {
   return {
     type: REQUEST_FEATURED_PIES,
-    page
   }
 }
 
-function receiveFeaturedPiesSuccess(featuredPies) {
+export function receiveFeaturedPiesSuccess(featuredPies, ascendingSort) {
   return {
     type: RECEIVE_FEATURED_PIES_SUCCESS,
-    featuredPies
+    featuredPies,
+    ascendingSort
   }
 }
 
-function receiveFeaturedPiesError(error) {
+export function receiveFeaturedPiesError(error) {
   return {
     type: RECEIVE_FEATURED_PIES_ERROR,
     error
@@ -48,10 +54,10 @@ function apiCallPromise(page, limit) {
 export function fetchFeaturedPies() {
   return async (dispatch, getState) => {
     try {
-      const { featuredPies: { page } } = getState();
+      const { featuredPies: { page, ascendingSort } } = getState();
       dispatch(requestFeaturedPies());
       const response = await apiCallPromise(page, MAX_PER_PAGE);
-      dispatch(receiveFeaturedPiesSuccess(response.data));
+      dispatch(receiveFeaturedPiesSuccess(response.data, ascendingSort));
     } catch (error) {
       dispatch(receiveFeaturedPiesError(error));
     }

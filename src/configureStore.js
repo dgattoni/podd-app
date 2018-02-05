@@ -28,7 +28,8 @@ function configureStore() {
       items: [],
       isFetching: false,
       isFailure: false,
-      page: 1
+      page: 1,
+      ascendingSort: true,
     },
   };
 

@@ -3,31 +3,42 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Grid from 'components/Grid/Grid.js';
 import Paginator from 'components/Paginator/Paginator.js';
+import TogglePrice from 'components/TogglePrice/TogglePrice.js';
 
 import {
   fetchFeaturedPies,
   incrementPage,
-  decrementPage } from 'actions/featuredPies.js';
+  decrementPage,
+  toggleSort,
+} from 'actions/featuredPies.js';
 
 class GridContainer extends Component {
   constructor(props) {
     super(props);
     this.onNextButtonClick = this.onNextButtonClick.bind(this);
     this.onPrevButtonClick = this.onPrevButtonClick.bind(this);
+    this.onToggleSort = this.onToggleSort.bind(this);
   }
 
   onNextButtonClick() {
-    console.log('onNextButtonClick');
     const { incrementPage, fetchFeaturedPies } = this.props;
     incrementPage();
     fetchFeaturedPies();
   }
 
   onPrevButtonClick() {
-    console.log('onPrevButtonClick');
     const { decrementPage, fetchFeaturedPies } = this.props;
     decrementPage();
     fetchFeaturedPies();
+  }
+
+  onToggleSort() {
+    const { toggleSort } = this.props;
+    toggleSort();
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.featuredPies.items.length > 0;
   }
 
   componentDidMount() {
@@ -35,10 +46,14 @@ class GridContainer extends Component {
   }
 
   render() {
-    const { featuredPies } = this.props;
+    const { featuredPies: { items, ascendingSort } } = this.props;
     return(
       <Fragment>
-        <Grid items={featuredPies.items} />
+        <TogglePrice
+          onToggleSort={this.onToggleSort}
+          isAccendingSort={ascendingSort}
+        />
+        <Grid items={items} />
         <Paginator
           onPrevButtonClick={this.onPrevButtonClick}
           onNextButtonClick={this.onNextButtonClick}
@@ -57,7 +72,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     fetchFeaturedPies,
     incrementPage,
-    decrementPage
+    decrementPage,
+    toggleSort
   }, dispatch);
 }
 

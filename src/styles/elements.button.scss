@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12rem;
+  min-width: 15rem;
   height: 4rem;
   color: $color-text;
   font-weight: bold;
@@ -32,14 +32,21 @@
   }
 }
 
+.Btn--toggle {
+
+  &:hover {
+    animation-name: none;
+  }
+}
+
 @keyframes shake {
   0%, 100% {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(10deg);
+    transform: rotate(5deg);
   }
   75% {
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
   }
 }
