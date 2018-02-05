@@ -32,7 +32,7 @@ function requestFeaturedPies() {
   }
 }
 
-function receiveFeaturedPiesSuccess(featuredPies, ascendingSort) {
+export function receiveFeaturedPiesSuccess(featuredPies, ascendingSort) {
   return {
     type: RECEIVE_FEATURED_PIES_SUCCESS,
     featuredPies,
