@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component displays Footer component with copyrights 1`] = `
+<footer
+  className="Footer"
+>
+  <div
+    className="Container"
+  >
+    <p
+      className="Footer-copyright"
+    >
+      Made with ♥ by Daniela Gattoni, Frontend Engineer.
+    </p>
+  </div>
+</footer>
+`;
