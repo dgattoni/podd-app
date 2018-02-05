@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Grid from 'components/Grid/Grid.js';
 import Paginator from 'components/Paginator/Paginator.js';
+import TogglePrice from 'components/TogglePrice/TogglePrice.js';
 
 import {
   fetchFeaturedPies,
@@ -44,7 +45,10 @@ class GridContainer extends Component {
     const { featuredPies: { items, ascendingSort } } = this.props;
     return(
       <Fragment>
-        <button onClick={this.onToggleSort}>Price sorted: {ascendingSort ? 'asc' : 'desc'}</button>
+        <TogglePrice
+          onToggleSort={this.onToggleSort}
+          isAccendingSort={ascendingSort}
+        />
         <Grid items={items} />
         <Paginator
           onPrevButtonClick={this.onPrevButtonClick}
