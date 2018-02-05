@@ -37,6 +37,10 @@ class GridContainer extends Component {
     toggleSort();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.featuredPies.items.length > 0;
+  }
+
   componentDidMount() {
     this.props.fetchFeaturedPies();
   }
