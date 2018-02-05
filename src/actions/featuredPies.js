@@ -26,7 +26,7 @@ export function decrementPage() {
   }
 }
 
-function requestFeaturedPies() {
+export function requestFeaturedPies() {
   return {
     type: REQUEST_FEATURED_PIES,
   }
@@ -40,7 +40,7 @@ export function receiveFeaturedPiesSuccess(featuredPies, ascendingSort) {
   }
 }
 
-function receiveFeaturedPiesError(error) {
+export function receiveFeaturedPiesError(error) {
   return {
     type: RECEIVE_FEATURED_PIES_ERROR,
     error
