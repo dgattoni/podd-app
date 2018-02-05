@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedCard component displays FeaturedCard component 1`] = `
+<div
+  className="FeaturedCard"
+>
+  <div
+    className="FeaturedCard-name"
+  >
+    <div
+      className="FeaturedCard-label"
+    >
+      Eleven-7
+    </div>
+    <div
+      className="FeaturedCard-label FeaturedCard-rating"
+    >
+      10
+      ♥
+    </div>
+  </div>
+  <div
+    className="FeaturedCard-address"
+  >
+    <div
+      className="FeaturedCard-label"
+    >
+      <a
+        href="tel:+0481233123"
+      >
+        0481233123
+      </a>
+    </div>
+    <div
+      className="FeaturedCard-label"
+    >
+      <a
+        href="https://www.google.com.au/maps?q=-37.816981,144.9584893"
+        target="_blank"
+      >
+        410 Collins Street
+      </a>
+    </div>
+  </div>
+  <div
+    className="FeaturedCard-frame"
+  >
+    <h3>
+      Pie of the day:
+    </h3>
+    <div
+      className="FeaturedCard-pies"
+    >
+      <div
+        className="FeaturedCard-pie"
+      >
+        <div
+          className="FeaturedCard-label"
+        >
+          Beef
+        </div>
+        <div
+          className="FeaturedCard-label"
+        >
+          $3.00
+        </div>
+        <div
+          className="FeaturedCard-label"
+        >
+          Stock:5
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
