@@ -21,14 +21,11 @@ const FeaturedCard = ({ featured }) => {
      <div className="FeaturedCard-frame">
        <h3>Pie of the day:</h3>
        <div className="FeaturedCard-pies">
-         {pieOfTheDay.length > 0 ? pieOfTheDay.map((pie, index) =>
-           <div className="FeaturedCard-pie" key={index}>
-             <div className="FeaturedCard-label">{pie.displayName}</div>
-             <div className="FeaturedCard-label">{pie.priceString}</div>
-             <div className="FeaturedCard-label">{`Stock:${pie.quantity}`}</div>
-           </div>) :
-           <div className="FeaturedCard-noFeatured">No Featured Pies.</div>
-         }
+         <div className="FeaturedCard-pie">
+           <div className="FeaturedCard-label">{pieOfTheDay.displayName}</div>
+           <div className="FeaturedCard-label">{pieOfTheDay.priceString}</div>
+           <div className="FeaturedCard-label">{`Stock:${pieOfTheDay.quantity}`}</div>
+         </div>
        </div>
      </div>
    </div>

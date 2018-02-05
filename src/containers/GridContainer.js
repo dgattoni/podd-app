@@ -7,27 +7,32 @@ import Paginator from 'components/Paginator/Paginator.js';
 import {
   fetchFeaturedPies,
   incrementPage,
-  decrementPage } from 'actions/featuredPies.js';
+  decrementPage,
+  sortPrice } from 'actions/featuredPies.js';
 
 class GridContainer extends Component {
   constructor(props) {
     super(props);
     this.onNextButtonClick = this.onNextButtonClick.bind(this);
     this.onPrevButtonClick = this.onPrevButtonClick.bind(this);
+    this.onSortButtonClick = this.onSortButtonClick.bind(this);
   }
 
   onNextButtonClick() {
-    console.log('onNextButtonClick');
     const { incrementPage, fetchFeaturedPies } = this.props;
     incrementPage();
     fetchFeaturedPies();
   }
 
   onPrevButtonClick() {
-    console.log('onPrevButtonClick');
     const { decrementPage, fetchFeaturedPies } = this.props;
     decrementPage();
     fetchFeaturedPies();
+  }
+
+  onSortButtonClick(defaultSort) {
+    const { sortPrice } = this.props;
+    sortPrice(defaultSort);
   }
 
   componentDidMount() {
@@ -35,10 +40,13 @@ class GridContainer extends Component {
   }
 
   render() {
-    const { featuredPies } = this.props;
+    const { featuredPies: { items, isFetching, defaultSort } } = this.props;
     return(
       <Fragment>
-        <Grid items={featuredPies.items} />
+        <p>Default Sort: {defaultSort}</p>
+        <button onClick={() => this.onSortButtonClick('asc')}>PRICE ASC</button>
+        <button onClick={() => this.onSortButtonClick('desc')}>PRICE DESC</button>
+        <Grid items={items} />
         <Paginator
           onPrevButtonClick={this.onPrevButtonClick}
           onNextButtonClick={this.onNextButtonClick}
@@ -57,7 +65,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     fetchFeaturedPies,
     incrementPage,
-    decrementPage
+    decrementPage,
+    sortPrice
   }, dispatch);
 }
 
