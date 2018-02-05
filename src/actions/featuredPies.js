@@ -57,9 +57,7 @@ export function fetchFeaturedPies() {
       const { featuredPies: { page, ascendingSort } } = getState();
       dispatch(requestFeaturedPies());
       const response = await apiCallPromise(page, MAX_PER_PAGE);
-      // if(response.data.length > 0) {
-        dispatch(receiveFeaturedPiesSuccess(response.data, ascendingSort));
-      // }
+      dispatch(receiveFeaturedPiesSuccess(response.data, ascendingSort));
     } catch (error) {
       dispatch(receiveFeaturedPiesError(error));
     }

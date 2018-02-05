@@ -49,7 +49,7 @@ export default function featuredPies(state = {}, action) {
         isFailure: true
       });
     case INCREMENT_PAGE:
-      if (!state.items.length) {
+      if (state.items.length === 0) {
         return state;
       }
       return Object.assign({}, state, {
