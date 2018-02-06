@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component displays Header component 1`] = `
+<div
+  className="Header"
+>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    exact={true}
+    to="/"
+  >
+    <div
+      className="Avatar"
+    />
+  </NavLink>
+  <div
+    className="Header-title"
+  >
+    PIE OF THE DAY
+  </div>
+</div>
+`;

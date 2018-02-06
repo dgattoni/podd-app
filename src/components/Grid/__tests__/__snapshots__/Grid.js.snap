@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class Grid extends _react.Component {
+
+  render() {const
+    items = this.props.items;
+
+    return (
+      _react2.default.createElement('div', { className: 'Grid', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this },
+
+        items.map((item, index) => _react2.default.createElement(_FeaturedCard2.default, { key: index, featured: item, __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this }))));
+
+
+
+  }} displays Grid component 1`] = `
+<div
+  className="Grid"
+>
+  <FeaturedCard
+    featured={
+      Object {
+        "pieOfTheDay": Object {
+          "displayName": "Beef",
+          "priceString": "$3.00",
+          "quantity": 5,
+        },
+        "store": Object {
+          "address": "410 Collins Street",
+          "coords": Object {
+            "latitude": "-37.816981",
+            "longitude": "144.9584893",
+          },
+          "displayName": "Eleven-7",
+          "id": 1,
+          "mobile": "0481233123",
+          "rating": 10,
+        },
+      }
+    }
+  />
+  <FeaturedCard
+    featured={
+      Object {
+        "pieOfTheDay": Object {
+          "displayName": "Beef and curry",
+          "priceString": "$2.50",
+          "quantity": 1,
+        },
+        "store": Object {
+          "address": "366 Lonsdale Street",
+          "coords": Object {
+            "latitude": "-37.816981",
+            "longitude": "144.9584893",
+          },
+          "displayName": "Brian's Pies",
+          "id": 1,
+          "mobile": "0481233123",
+          "rating": 8,
+        },
+      }
+    }
+  />
+</div>
+`;
