@@ -20,6 +20,11 @@
 2. yarn start
 3. navigate to http://localhost:3000 in your browser of choice.
 
+### Tests
+
+1. yarn test
+2. in your terminal Press `a` to run all tests.
+
 
 ### Tools and libraries
 
@@ -52,11 +57,7 @@
 
 
 ### Todo:
-
-1. Add unit/integration tests with jest. (pending)
-2. Fix pagination issue: once it reaches last page it should hide next-button. (pending)
 3. Add optional Feature: Search against the pie name (enhancement)
-4. Add optional Feature: Filter by price (ascending/descending) (enhancement)
 5. Add Typechecking With PropTypes (enhancement)
 6. Refactoring Grid as high-order-component to be reused on displaying Stores and Pies entities (enhancement)
 7. Refactoring for better handling on API error responses (enhancement)
